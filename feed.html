@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/feed.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Cameras Vigia</title>
+  <script>
+    function executarCodigoPython() {
+      // Envia uma requisição para o servidor para executar o código Python
+      fetch('/executar_codigo', {
+        method: 'POST'
+      })
+        .then(response => response.text())  // Recebe a resposta como texto
+        .then(data => {
+          // Exibe a resposta recebida do servidor na página
+          document.getElementById('resultado').innerHTML = data;
+        })
+        .catch(error => {
+          console.error('Erro ao executar o código Python:', error);
+          document.getElementById('resultado').innerHTML = "Ocorreu um erro ao executar o código Python.";
+        });
+    }
+  </script>
+
+</head>
+
+<body>
+  <section class="menu">
+    <ul class="menu2">
+      <li><a href="feed.html"><img src="img/casa.png" alt="icone home">
+          <h1>Feed</h1>
+        </a></li>
+      <li><a href="cadastro_ocorrencia.html"><img src="img/feeds.png" alt="icone feed">
+          <h1>Ocorrências</h1>
+        </a></li>
+      <li><a href="cameras.html"><img src="img/camera (1).png" alt="icone camera">
+          <h1>Câmeras</h1>
+        </a></li>
+    </ul>
+    <div class="menu_img"><img src="img/logo_vigia.png" alt="logo"></div>
+    <ul class="menu3">
+      <li><a href=""><img src="img/perfil-.png" alt="perfil"></a></li>
+      <li><a href="index.html" id="sair">SAIR</a></li>
+    </ul>
+  </section>
+
+  <main class="main_ocorrencia">
+    <div class="main_bloco">
+      <h1> Assalto no Bologne</h1>
+      <img src="img/cam_1.jpg" alt="camera 1">
+      <p>Descrição da notícia: Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel, placeat labore consequatur natus laboriosam suscipit iusto quis reiciendis commodi.</p>
+    </div>
+    <div class="main_bloco">
+      <h1> Assalto no Bologne</h1>
+      <img src="img/cam_1.jpg" alt="camera 1">
+      <p>Descrição da notícia: Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel, placeat labore consequatur natus laboriosam suscipit iusto quis reiciendis commodi.</p>
+    </div>
+    <div class="main_bloco">
+      <h1> Assalto no Bologne</h1>
+      <img src="img/cam_1.jpg" alt="camera 1">
+      <p>Descrição da notícia: Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel, placeat labore consequatur natus laboriosam suscipit iusto quis reiciendis commodi.</p>
+    </div>
+    <div class="main_bloco">
+      <h1> Assalto no Bologne</h1>
+      <img src="img/cam_1.jpg" alt="camera 1">
+      <p>Descrição da notícia: Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel, placeat labore consequatur natus laboriosam suscipit iusto quis reiciendis commodi.</p>
+    </div>
+  </main>
+
+</body>
+
+</html>

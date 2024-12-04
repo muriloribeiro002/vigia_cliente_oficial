@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Vigia </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="ocorrencia-form">
+    <h1>Cadastrar Usuário<h1>
+        <form action="registra_cadastro.php" method="post">
+          <input type="text" name="nome" placeholder="Nome completo" required>
+          <input type="text" name="cpf" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="CPF" required title="Digite o CPF no formato 999.999.999-99">
+          <input type="text" name="dt_nascimento" maxlength="10" pattern="\d{2}/\d{2}/\d{4}" placeholder="Data de nascimento" required title="Digite a data no formato dd/mm/aaaa">
+          <input type="text" name="email" placeholder="E-mail" required>
+          <input type="text" name="celular" maxlength="14" pattern="\(\d{2}\)\d{5}\-\d{4}" placeholder="Celular" required title="Digite o celular no formato (11)98765-4321">
+          <input class="senha" type="password" name="senha" placeholder="Senha" required=true>
+          <button type="submit">Cadastrar</button>
+        </form>
+  </div>
+</body>
+
+</html>

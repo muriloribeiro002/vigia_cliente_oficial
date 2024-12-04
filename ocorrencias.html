@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ocorrências</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="ocorrencia-form">
+        <h2>Registrar Ocorrência</h2>
+        <form action="registra_BO.php" method="post">
+			<input type="text" name="tipo" placeholder="Tipo da ocorrência" required>
+			<input type="text" name="dt_evento" maxlength="10" pattern="\d{2}/\d{2}/\d{4}" placeholder="Data da ocorrência" required title="Digite a data no formato dd/mm/aaaa">
+			<input type="text" name="endereco" placeholder="Endereço da ocorrência" required>
+            <input type="text" name="descricao" placeholder="Descrição da ocorrência" required>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
